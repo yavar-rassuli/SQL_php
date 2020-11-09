@@ -1,0 +1,49 @@
+1. SELECT Vorname, Name, Personalnummer FROM Personaldatenbank;
+
+2. SELECT * COUNT(Personalnummer) FROM Personaldatenbank WHERE Ort='Hamburg';
+
+3. SELECT Personalnummer, Name, Gehalt FROM Personaldatenbank WHERE Gehalt >4000;
+
+4. SELECT Personalnummer, Vorname, Name,Ort FROM Personaldatenbank WHERE Gehalt BETWEEN 3500 AND 4500;
+
+5. SELECT plz, Vorname,Ort , COUNT(Personalnummer) FROM Personaldatenbank GROUP BY Ort;
+
+6. SELECT Personalnummer, Name, Strasse FROM Personaldatenbank WHERE Strasse LIKE 'B%';
+
+7. SELECT COUNT(Gehalt), AVG(Gehalt), SUM(Gehalt), MAX(Gehalt), MIN(Gehalt) FROM Personaldatenbank;
+
+8. SELECT SUM(Gehalt), Ort FROM Personaldatenbank GROUP BY Ort;
+
+9. SELECT  Personaldatenbank.Name, schulungsdatenbank.Schulungsbezeichnung, schulungsdatenbank.Kursbeginn 
+FROM Personaldatenbank INNER JOIN teilnehmer ON Personaldatenbank.Personalnummer= teilnehmer.Personalnummer
+INNER JOIN schulungsdatenbank ON schulungsdatenbank.laufende_NR=teilnehmer.laufende_NR  WHERE Personaldatenbank.Ort ='Hamburg';
+
+10. SELECT Schulungsbezeichnung,Kurskosten AS 'Kurskosten grösser bzw.kleiner als 2000/1000'  FROM schulungsdatenbank WHERE Kurskosten>2000 OR Kurskosten<1000 ;
+
+11.SELECT Personalnummer, Vorname, Name FROM Personaldatenbank WHERE Gehalt>=(SELECT AVG(Gehalt) FROM Personaldatenbank);
+
+12.UPDATE Personaldatenbank SET(Gehalt*9/100) WHERE Gehalt>(SELECT AVG(Gehalt) FROM Personaldatenbank);
+
+13. DELETE FROM Personaldatenbank WHERE Personalnummer=1112;
+
+14. ALTER TABLE Personaldatenbank  ADD Beruf VARCHAR(20);
+
+15. CREATE USER SusiKaufmann@localhost IDENTIFIED BY '1234';
+    GRANT SELECT ON Personaldatenbank  TO SusiKaufmann@localhost;
+
+   CREATE USER ChristianMohler@localhost IDENTIFIED BY 'Abcd';
+   GRANT SELECT, INSERT ON teilnehmer TO ChristianMohler@localhost;
+   GRANT SELECT, INSERT,UPDATE ON veranstalter TO ChristianMohler@localhost;
+   GRANT SELECT ON schulungsdatenbank TO ChristianMohler@localhost;
+
+   CREATE USER BettinaMeister@localhost IDENTIFIED BY '9876';
+   GRANT SELECT, INSERT, UPDATE, DELETE ON Personaldatenbank TO BettinaMeister@localhost;
+
+   CREATE USER BrunoKlinger@localhost IDENTIFIED BY 'Dcba';
+   GRANT ALL ON Personaldatenbank TO BrunoKlinger@localhost;
+   GRANT ALL ON teilnehmer TO BrunoKlinger@localhost;
+   GRANT ALL ON schulungsdatenbank TO BrunoKlinger@localhost;
+   GRANT ALL ON veranstalter TO BrunoKlinger@localhost;
+
+
+

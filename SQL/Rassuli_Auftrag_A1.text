@@ -1,0 +1,21 @@
+/*CREATE DATABASE Auftragsverwaltung
+;*/
+
+USE Auftragsverwaltung
+;
+
+/*CREATE TABLE Mitarbeiter(PersonalNr INT PRIMARY KEY, Nachname VARCHAR(30)NOT NULL, Vorname VARchar(30), Adresse VARCHAR(50), Ort VARCHAR(30), Geburtstag SMALLDATETIME
+)
+;
+
+CREATE TABLE tb_Artikel(ArtikelNr INT PRIMARY KEY, Bezeichnung VARCHAR(50) NOT NULL UNIQUE, 
+)
+;
+
+CREATE TABLE tb_Auftrag(AuftragNr INT PRIMARY KEY, ArtikelNr_FK SMALLINT
+)
+;
+
+CREATE TABLE tb_Bearbeitet(AuftragNr INT FOREIGN KEY REFERENCES tb_Auftrag(AuftragNr), PersonalNr INT, Zeit_in_Stunden DECIMAL(5,2), primary key(AuftragNr, PersonalNr)
+)
+;*/

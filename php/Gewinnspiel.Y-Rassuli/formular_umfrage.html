@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+.btn1 {
+width: 10%;
+background-color: rgb(76, 91, 175);
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+.btn1:hover {
+background-color: #4577a0;
+}
+
+</style>
+<body>
+    <h1>Umfrage mit Gewinn Spiel</h1>
+<div>
+<form action="Umfrage.php" method="post">
+<label for="fname">Vorname und Nachname</label>
+<input type="text"  name="name" placeholder="deine name.."><br><br>
+<label for="strasse">Strasse</label>
+<input type= "text" name = "Strasse" placeholder="Strasse.."><br><br>
+<label for="PLZ und Ort">PLZ und Ort</label>
+<input type= "text" name = "PLZundOrt" placeholder="PLZ und Ort.."><br><br>
+
+<h2>Bitte wählen Sie die -antwort aus, die für Sie am besten zutrifft:</h2>
+
+<p>Wie gefällt Ihnnen unser Internetangebot?
+    <br><input type="radio" name="Internetangebot" value="sehr gut">Sehr gut
+    <br><input type="radio" name="Internetangebot" value="gut">Gut
+    <br><input type="radio" name="Internetangebot" value="nicht so gut">Nicht so gut
+    <br><input type="radio" name="Internetangebot" value="gar nicht">Gar nicht
+    
+    <br><br>Wie beurteilen Sie den Information unserer Webseite?
+    <br><input type="radio" name="Information" value="Sehr informativ">Sehr informativ
+    <br><input type="radio" name="Information" value="Die eine oder andere Information fehlt">Die eine oder andere Information fehlt
+    <br><input type="radio" name="Information" value="Es fehlen sehr viele wichtige Informationen">Es fehlen sehr viele wichtige Informationen
+    
+    <br><br>Wie kommen Sie mit dem Bestellsystem zurecht?
+    <br><input type="radio" name="Bestellsystem" value="Sehr gut">Sehr gut
+    <br><input type="radio" name="Bestellsystem" value="Gut">gut
+    <br><input type="radio" name="Bestellsystem" value="Nicht besonders Gut">Nicht besonders Gut
+    <br><input type="radio" name="Bestellsystem" value="Gar nicht">Gar nicht
+
+
+    <p>Möchten Sie uns noch etwas mitteilen?
+    <input type= "textarea" name="komenttar" rows="5" cols="25"></p>
+
+    
+
+    <input type="submit"  name="Absenden" value="Absenden" class="btn1"> 
+
+        
+</form>
+</div>
+</body>
+</html>

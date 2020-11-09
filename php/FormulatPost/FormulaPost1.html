@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.cc{
+width: 700px;
+}
+input{
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+.btn1 {
+width: 100%;
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+.btn1:hover {
+background-color: #45a049;
+}
+div {
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 20px;
+}
+</style>
+<body>
+<h1>Yavar Rassuli</h1>
+<div class="cc">
+<form action="b.php" method="post">
+<label for="fname">Vorname</label>
+<input type="text" id="vname" name="vorname" placeholder="deine vorname..">
+<label for="nachname">Nachname</label>
+<input type="text" id="nachname" name="nachname" placeholder="nachname..">
+<label for="wohnort">Wohnort</label>
+<input type= "text" name = "tWohnort" placeholder="wohnort..">
+
+<h2>Was wir wiessen wollen</h2>
+
+Wie wohnen Sie?
+<input type= "radio" name = "Eeinfamilienhaus" value="Eeinfamilienhaus">Eeinfamilienhaus
+<input type= "radio" name =  "Eigentumshaus" value="Eigentumshaus">Eigentumshaus
+<input type= "radio" name = "Mehrfamilienhaus" value = "Mehrfamilienhaus">Mehrfamilienhaus</p>
+
+<p>Welche TV-sendungen sehen Sie gern?
+    <input type= "checkbox" name = "Dokumentation" value="Dokumentation">Dokumentation
+    <input type= "checkbox" name = "Nachrichten"  value="Nachrichten"> "Nachrichten
+    <input type= "checkbox" name = "Spielfilme" value="Spielfilme">Spielfilme
+    <input type= "checkbox" name = "Sport"value="Sport">Sport</p>
+
+    <p>Haben Sie noch eine Nachricht fur uns?
+    <input type= "textarea" name="komenttar" rows="5" cols="25"></p>
+
+    
+
+    <input type="submit" value="Daten speichern" class="btn1"> 
+    <input type="reset" name="reset" value="Zurücksetzen"></p>
+        
+</form>
+</div>
+</body>
+</html>
